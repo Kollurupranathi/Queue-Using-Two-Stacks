@@ -16,21 +16,22 @@ class Queue {
     public void enqueue(int x) {
         stack1.push(x);
     }
+        
 
     // Removes the element from in front of queue.
+    //for condition where stack 2 is empty, first move operation is done, so the time complexity will be O(N)
     public int dequeue() {
-        
 
     }
     
     // Get the front element.
+    //for condition where stack 2 is empty, first move operation is done, so the time complexity will be O(N)
     public int peek() {
-
+    
     }
     
     // Return whether the queue is empty.
     public boolean empty() {
-        //return stack1.isEmpty()&&stack2.isEmpty();
         if(size()==0){return true;}
         return false;
     }
@@ -53,5 +54,6 @@ class Queue {
                 System.out.println(queue.peek());
             } 
         }
+        scan.close();
     }
 }
