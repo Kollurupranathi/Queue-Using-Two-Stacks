@@ -16,14 +16,24 @@ class Queue {
     public void enqueue(int x) {
         stack1.push(x);
     }
-        
+    
+    //To transfer the elements from stack1 to stack2
+    public void stack1to_2_Transfer(){
+        if(stack2.isEmpty()){
+            while(!stack1.isEmpty())
+                stack2.push(stack1.pop());
+        }
+    }
 
     // Removes the element from in front of queue.
     //for condition where stack 2 is empty, first move operation is done, so the time complexity will be O(N)
     public int dequeue() {
+        if(empty())throw new NoSuchElementException("Queue underflow");
+        stack1to_2_Transfer();
+        return stack2.pop();
 
     }
-    
+        
     // Get the front element.
     //for condition where stack 2 is empty, first move operation is done, so the time complexity will be O(N)
     public int peek() {
