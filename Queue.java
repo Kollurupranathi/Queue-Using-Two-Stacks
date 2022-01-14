@@ -1,14 +1,14 @@
 // Queue with two stacks. Implement a queue with two stacks so that each queue operations takes a
 // constant amortized number of stack operations. Hint: If you push elements onto a stack and then 
 // pop them all, they appear in reverse order. If you repeat this process, they're now back in order.
-import java.io.*;
+//import java.io.*;
 import java.util.*;
 
 class Queue {
-
-
+ 
     public Queue() {
-
+        Stack<Integer> stack1 = new Stack<Integer>();
+        Stack<Integer> stack2 = new Stack<Integer>();
     }
 
     // Push element x to the back of queue.
